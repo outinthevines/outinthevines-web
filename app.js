@@ -178,8 +178,8 @@ function renderPicks(){
 function toast(msg){
  let t=document.createElement("div");t.textContent=msg;t.style.cssText="position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:#241c24;color:white;padding:13px 18px;border-radius:999px;z-index:99;font-weight:700;box-shadow:0 12px 30px #0004";document.body.appendChild(t);setTimeout(()=>t.remove(),2200);
 }
-$(".filter-row button").forEach(b=>b.addEventListener("click",()=>{activeFilter=b.dataset.filter;$(".filter-row button").forEach(x=>x.classList.toggle("active",x===b));renderExplore();}));
-$(".choice-row button").forEach(b=>b.addEventListener("click",()=>{const row=b.parentElement;row.querySelectorAll("button").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");matcher[row.dataset.group]=b.dataset.value;}));
+$$(".filter-row button").forEach(b=>b.addEventListener("click",()=>{activeFilter=b.dataset.filter;$$(".filter-row button").forEach(x=>x.classList.toggle("active",x===b));renderExplore();}));
+$$(".choice-row button").forEach(b=>b.addEventListener("click",()=>{const row=b.parentElement;row.querySelectorAll("button").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");matcher[row.dataset.group]=b.dataset.value;}));
 if("serviceWorker"in navigator) navigator.serviceWorker.register("./service-worker.js");
 initWineryData();
 
