@@ -1,5 +1,5 @@
-const CACHE="oitv-founders-v2";
-const ASSETS=["./","./index.html","./styles.css","./data.js","./winery-data.js","./app.js","./manifest.webmanifest",
+const CACHE="oitv-founders-v3";
+const ASSETS=["./","./index.html","./styles.css","./winery-data.js","./app.js","./manifest.webmanifest","./icon.svg",
 "./data/schemas/winery-profile.schema.json",
 "./data/profiles/wineries/leoness.json","./data/profiles/wineries/akash.json","./data/profiles/wineries/doffo.json","./data/profiles/wineries/europa.json","./data/profiles/wineries/wilson.json",
 "./assets/brand/primary-logo.png","./assets/brand/vinny-hero.png","./assets/brand/app-icon.png",

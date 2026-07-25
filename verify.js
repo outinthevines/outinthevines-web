@@ -69,9 +69,9 @@ function logWarn(test) { results.warnings.push(test); console.log('⚠️  WARN:
     if (heroH1 && heroH1.includes('Find your kind of')) logPass(`Hero headline present: "${heroH1.replace(/\n/g,' ')}"`);
     else logFail('Hero headline present', heroH1);
 
-    // Wait for async winery data to load (initWineryData fetches JSON)
-    await page.waitForFunction(() => window.WINERIES && window.WINERIES.length === 5, { timeout: 10000 });
-    logPass('Async winery data loaded (WINERIES array populated)');
+    // Wait for async winery data to load (initWineryData fetches canonical JSON)
+    await page.waitForFunction(() => typeof WINERIES !== 'undefined' && WINERIES.length === 5, { timeout: 10000 });
+    logPass('Async winery data loaded (WINERIES array populated from canonical JSON)');
 
     await page.screenshot({ path: '/tmp/screenshots/01-homepage.png', fullPage: false });
     results.screenshots.push('01-homepage.png');
