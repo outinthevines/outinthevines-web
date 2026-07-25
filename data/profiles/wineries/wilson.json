@@ -1,0 +1,133 @@
+{
+  "schemaVersion": "1.0",
+  "identity": {
+    "id": "wilson",
+    "slug": "wilson",
+    "name": "Wilson Creek Winery",
+    "region": "Winchester Road",
+    "location": { "city": "Temecula", "state": "CA", "latitude": null, "longitude": null },
+    "official": {
+      "websiteUrl": "https://www.wilsoncreekwinery.com/hours-directions/",
+      "bookingUrl": "",
+      "phone": "",
+      "address": "35960 Rancho California Rd, Temecula, CA",
+      "eventsUrl": "https://www.wilsoncreekwinery.com/collection/events"
+    },
+    "icon": "🥂"
+  },
+  "hero": {
+    "eyebrow": "Winchester Road",
+    "headline": "Wilson Creek Winery",
+    "subtitle": "Energetic · Group-friendly · Full-service",
+    "imageUrl": "assets/wineries/wilson.jpg",
+    "imageAlt": "Prototype wine-country photography. Replace with owned or licensed Wilson Creek imagery.",
+    "cardGradient": "linear-gradient(135deg,#4B1E4D,#d89bba)",
+    "actions": ["save", "addToDay", "directions"]
+  },
+  "vinny": {
+    "take": "Bring the group, make a reservation where needed, and accept that somebody is ordering Almond Sparkling.",
+    "fit": ["Birthdays", "Family visits", "Large groups", "First-time visitors", "Sparkling wine fans"],
+    "watchOuts": ["You want intimate and quiet", "You avoid high-energy weekends", "You prefer boutique-scale tastings"],
+    "confidence": "medium",
+    "freshness": "July 11, 2026",
+    "closingLine": "",
+    "signature": { "eyebrow": "POP THE ALMOND", "headline": "Built for celebrations, groups, and good news." }
+  },
+  "welcome": {
+    "overall": "Welcoming",
+    "label": "Welcome Index™",
+    "dimensions": { "hospitality": null, "belonging": null, "accessibility": null, "responsiveness": null, "community": null, "authenticity": null },
+    "confidence": "Medium",
+    "evidenceCoverage": null,
+    "sourceCount": null,
+    "methodologyVersion": "1.0",
+    "lastReviewedAt": "June 2026",
+    "explanation": "Strong group hospitality with additional evidence gathering in progress.",
+    "evidence": ["Firsthand visit", "Public information review"]
+  },
+  "wine": {
+    "qualityLabel": "",
+    "qualityScore": null,
+    "knownFor": ["Almond Sparkling Wine", "Large-group visits", "Creekside Grille", "Events and weddings", "Family-oriented hospitality"],
+    "signatureWines": [],
+    "styleTags": ["social", "food", "groups", "sparkling", "music"]
+  },
+  "quickLook": {
+    "cards": [
+      { "type": "pets", "label": "Dogs", "value": "Verify current policy", "state": "unknown" },
+      { "type": "food", "label": "Food", "value": "Full restaurant", "state": "yes" },
+      { "type": "music", "label": "Music", "value": "Regular programming", "state": "yes" },
+      { "type": "reservations", "label": "Reservations", "value": "Recommended", "state": "partial" },
+      { "type": "family", "label": "Family", "value": "Strong fit", "state": "yes" },
+      { "type": "patio", "label": "Patio", "value": "Large outdoor areas", "state": "yes" },
+      { "type": "groups", "label": "Groups", "value": "Excellent", "state": "yes" },
+      { "type": "access", "label": "Accessibility", "value": "Verify details", "state": "unknown" }
+    ],
+    "perfectFor": ["Birthdays", "Family visits", "Large groups", "First-time visitors", "Sparkling wine fans"],
+    "maybeSkipIf": ["You want intimate and quiet", "You avoid high-energy weekends", "You prefer boutique-scale tastings"],
+    "scorecard": { "wine": 4, "hospitality": 4, "food": 4, "photos": 4, "romance": 3, "energy": 5, "value": 4, "groups": 5 }
+  },
+  "planning": {
+    "idealVisitMinutes": "2–3 hours",
+    "reservationGuidance": "Recommended for restaurant and structured experiences",
+    "bestTime": "Earlier in the day on busy weekends",
+    "budget": "",
+    "groupNote": "One of the easier prototype options for larger groups",
+    "food": "Full-service Creekside Grille",
+    "firstVisitEssentials": ["Last tasting tickets sold 30 minutes before closing", "Early closures may occur for private events", "Multiple guest spaces and event venues"],
+    "amenities": ["Restaurant", "Picnic area", "Large events", "Wine club spaces", "Weddings", "Accommodations nearby"]
+  },
+  "hours": [
+    { "label": "Tasting Room", "text": "Mon–Thu 11 AM–6 PM · Fri 11 AM–8 PM · Sat–Sun 10 AM–6 PM" },
+    { "label": "Creekside Grille", "text": "Mon–Thu 11 AM–4 PM · Fri 11 AM–8 PM · Sat 11 AM–5 PM · Sun 10 AM–4 PM" },
+    { "label": "Library", "text": "Fri 12–5 PM · Sat–Sun 11 AM–5 PM" }
+  ],
+  "events": [
+    { "date": "Recurring", "title": "Friday Evening Music and Dining", "time": "Often 5–8:30 PM", "type": "Live Music" },
+    { "date": "Seasonal", "title": "Concerts and winery celebrations", "time": "See official calendar", "type": "Special Event" },
+    { "date": "Private", "title": "Weddings and large events", "time": "May affect closing times", "type": "Planning Note" }
+  ],
+  "reviewSnapshot": {
+    "editorialTake": "A high-capacity, energetic winery suited to celebrations, family visits, and groups that want dining and recognizable signature wines in one place.",
+    "strengths": [],
+    "tradeoffs": [],
+    "bestFor": ["Birthdays", "Family visits", "Large groups", "First-time visitors", "Sparkling wine fans"],
+    "brief": "A large wine-country destination with a tasting room, dining, picnic areas, events, and its signature Almond Sparkling Wine.",
+    "visitorPatterns": [
+      "The Almond Sparkling Wine is the property’s most recognizable calling card.",
+      "The scale and group-friendly setup are major strengths.",
+      "Visitors seeking intimate or quiet should favor earlier hours and avoid major event periods."
+    ],
+    "externalLinks": [
+      { "label": "Google reviews", "url": "https://www.google.com/search?q=Wilson+Creek+Winery+reviews" },
+      { "label": "Yelp", "url": "https://www.yelp.com/biz/wilson-creek-winery-and-vineyards-temecula" },
+      { "label": "Tripadvisor", "url": "https://www.tripadvisor.com/Search?q=Wilson%20Creek%20Winery" }
+    ]
+  },
+  "personalNotes": {
+    "andrew": { "visible": true, "headline": "Andrew’s Wilson Creek pick goes here", "note": "Add Andrew’s honest recommendation for navigating a lively visit." },
+    "antonio": { "visible": true, "headline": "Antonio’s Wilson Creek pick goes here", "note": "Add Antonio’s pick and whether the famous sparkling makes his list." },
+    "joint": { "visible": false, "note": "" }
+  },
+  "communitySignals": { "summary": "", "positivePatterns": [], "practicalPatterns": [], "emergingPatterns": [] },
+  "trust": {
+    "publicationStatus": "DEMO · REVIEW IN PROGRESS",
+    "overallConfidence": "Not yet assessed",
+    "sourceCount": 1,
+    "lastVerifiedAt": "July 11, 2026",
+    "staleFields": [],
+    "demoRating": "4.3"
+  },
+  "seo": {
+    "title": "Wilson Creek Winery - Out in the Vines",
+    "description": "A large wine-country destination with a tasting room, dining, picnic areas, events, and its signature Almond Sparkling Wine.",
+    "canonicalUrl": "",
+    "imageUrl": "assets/wineries/wilson.jpg"
+  },
+  "meta": {
+    "updatedAt": "July 11, 2026",
+    "publishedAt": null,
+    "featureFlags": [],
+    "theme": { "name": "celebration", "accent": "#B22A69", "surface": "#FCEEF4", "ink": "#4B1830", "displayFont": "DM Sans" }
+  }
+}

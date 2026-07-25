@@ -1,0 +1,133 @@
+{
+  "schemaVersion": "1.0",
+  "identity": {
+    "id": "doffo",
+    "slug": "doffo",
+    "name": "Doffo Winery",
+    "region": "De Portola Wine Trail",
+    "location": { "city": "Temecula", "state": "CA", "latitude": null, "longitude": null },
+    "official": {
+      "websiteUrl": "https://doffowines.com/",
+      "bookingUrl": "",
+      "phone": "",
+      "address": "36083 Summitville St, Temecula, CA",
+      "eventsUrl": "https://doffowines.com/calevents/"
+    },
+    "icon": "🏍️"
+  },
+  "hero": {
+    "eyebrow": "De Portola Wine Trail",
+    "headline": "Doffo Winery",
+    "subtitle": "Family-owned · Distinctive · Motorcycle culture",
+    "imageUrl": "assets/wineries/doffo.jpg",
+    "imageAlt": "Prototype wine-country photography. Replace with owned or licensed Doffo imagery.",
+    "cardGradient": "linear-gradient(135deg,#372f29,#a56b3f)",
+    "actions": ["save", "addToDay", "directions"]
+  },
+  "vinny": {
+    "take": "Come for the motorcycles. Give the wine your full attention too.",
+    "fit": ["Red-wine drinkers", "Motorcycle fans", "Brunch", "Distinctive experiences", "Repeat visitors"],
+    "watchOuts": ["You only drink crisp whites", "You want ultra-polished resort energy", "You are indifferent to motorcycles"],
+    "confidence": "medium",
+    "freshness": "July 11, 2026",
+    "closingLine": "",
+    "signature": { "eyebrow": "MOTO + MALBAC", "headline": "Family wine culture with horsepower." }
+  },
+  "welcome": {
+    "overall": "Welcoming",
+    "label": "Welcome Index™",
+    "dimensions": { "hospitality": null, "belonging": null, "accessibility": null, "responsiveness": null, "community": null, "authenticity": null },
+    "confidence": "Medium",
+    "evidenceCoverage": null,
+    "sourceCount": null,
+    "methodologyVersion": "1.0",
+    "lastReviewedAt": "June 2026",
+    "explanation": "Positive guest-experience indicators with additional documentation pending.",
+    "evidence": ["Firsthand visit", "Public information review"]
+  },
+  "wine": {
+    "qualityLabel": "",
+    "qualityScore": null,
+    "knownFor": ["Malbec", "Zinfandel", "Cabernet Sauvignon", "Syrah and red blends", "MotoDoffo collection"],
+    "signatureWines": [],
+    "styleTags": ["unique", "reds", "relaxed"]
+  },
+  "quickLook": {
+    "cards": [
+      { "type": "pets", "label": "Dogs", "value": "Verify current policy", "state": "unknown" },
+      { "type": "food", "label": "Food", "value": "Brunch House", "state": "yes" },
+      { "type": "music", "label": "Music", "value": "Concert dates", "state": "partial" },
+      { "type": "reservations", "label": "Reservations", "value": "Best for special events", "state": "partial" },
+      { "type": "family", "label": "Family", "value": "Generally suitable", "state": "yes" },
+      { "type": "patio", "label": "Patio", "value": "Relaxed", "state": "yes" },
+      { "type": "groups", "label": "Groups", "value": "Coordinate ahead", "state": "partial" },
+      { "type": "access", "label": "Accessibility", "value": "Verify details", "state": "unknown" }
+    ],
+    "perfectFor": ["Red-wine drinkers", "Motorcycle fans", "Brunch", "Distinctive experiences", "Repeat visitors"],
+    "maybeSkipIf": ["You only drink crisp whites", "You want ultra-polished resort energy", "You are indifferent to motorcycles"],
+    "scorecard": { "wine": 5, "hospitality": 4, "food": 4, "photos": 4, "romance": 3, "energy": 3, "value": 4, "groups": 4 }
+  },
+  "planning": {
+    "idealVisitMinutes": "2–3 hours",
+    "reservationGuidance": "Check requirements for tours and ticketed events",
+    "bestTime": "Morning brunch or a quieter weekday",
+    "budget": "",
+    "groupNote": "Coordinate larger parties and limo visits",
+    "food": "Brunch House Thu–Mon",
+    "firstVisitEssentials": ["Family owned and operated", "Large vintage motorcycle collection", "Brunch House and seasonal concerts"],
+    "amenities": ["Brunch", "Motorcycle museum", "Tours", "Concerts", "Private suite", "Outdoor patio"]
+  },
+  "hours": [
+    { "label": "Winery", "text": "Sun–Thu 11 AM–5 PM" },
+    { "label": "Winery", "text": "Fri–Sat 11 AM–6 PM" },
+    { "label": "Brunch House", "text": "Thu–Mon 10 AM–4 PM" }
+  ],
+  "events": [
+    { "date": "Jul 11", "title": "World Cup Soccer Viewing Parties", "time": "2 PM and 6 PM sessions", "type": "Viewing Party" },
+    { "date": "Jul 11", "title": "Summer Concert Series", "time": "7–10 PM · Sold out", "type": "Concert" },
+    { "date": "Jul 14–15", "title": "World Cup Semifinal Viewing Parties", "time": "12 PM", "type": "Viewing Party" }
+  ],
+  "reviewSnapshot": {
+    "editorialTake": "One of Temecula’s most distinctive winery identities. The motorcycle collection adds genuine character, while the winery’s reputation for fuller-bodied reds keeps the experience from becoming a novelty stop.",
+    "strengths": [],
+    "tradeoffs": [],
+    "bestFor": ["Red-wine drinkers", "Motorcycle fans", "Brunch", "Distinctive experiences", "Repeat visitors"],
+    "brief": "A family winery known for red wines and the MotoDoffo collection of more than 200 vintage motorcycles and scooters.",
+    "visitorPatterns": [
+      "The motorcycle collection is a memorable differentiator.",
+      "Red-wine drinkers tend to find plenty to explore.",
+      "Ticketed concerts and viewing parties can significantly change the atmosphere."
+    ],
+    "externalLinks": [
+      { "label": "Google reviews", "url": "https://www.google.com/search?q=Doffo+Winery+reviews" },
+      { "label": "Yelp", "url": "https://www.yelp.com/biz/doffo-winery-temecula" },
+      { "label": "Tripadvisor", "url": "https://www.tripadvisor.com/Search?q=Doffo%20Winery" }
+    ]
+  },
+  "personalNotes": {
+    "andrew": { "visible": true, "headline": "Andrew’s Doffo pick goes here", "note": "Add Andrew’s favorite structured red and tasting context." },
+    "antonio": { "visible": true, "headline": "Antonio’s Doffo pick goes here", "note": "Add Antonio’s favorite wine or his delightfully dissenting opinion." },
+    "joint": { "visible": false, "note": "" }
+  },
+  "communitySignals": { "summary": "", "positivePatterns": [], "practicalPatterns": [], "emergingPatterns": [] },
+  "trust": {
+    "publicationStatus": "DEMO · REVIEW IN PROGRESS",
+    "overallConfidence": "Not yet assessed",
+    "sourceCount": 1,
+    "lastVerifiedAt": "July 11, 2026",
+    "staleFields": [],
+    "demoRating": "4.2"
+  },
+  "seo": {
+    "title": "Doffo Winery - Out in the Vines",
+    "description": "A family winery known for red wines and the MotoDoffo collection of more than 200 vintage motorcycles and scooters.",
+    "canonicalUrl": "",
+    "imageUrl": "assets/wineries/doffo.jpg"
+  },
+  "meta": {
+    "updatedAt": "July 11, 2026",
+    "publishedAt": null,
+    "featureFlags": [],
+    "theme": { "name": "moto", "accent": "#A66A3F", "surface": "#F2ECE6", "ink": "#2B2521", "displayFont": "Roboto Slab" }
+  }
+}

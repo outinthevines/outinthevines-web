@@ -1,0 +1,134 @@
+{
+  "schemaVersion": "1.0",
+  "identity": {
+    "id": "europa",
+    "slug": "europa",
+    "name": "Europa Village",
+    "region": "Rancho California Road",
+    "location": { "city": "Temecula", "state": "CA", "latitude": null, "longitude": null },
+    "official": {
+      "websiteUrl": "https://www.europavillage.com/operating-hours/",
+      "bookingUrl": "",
+      "phone": "",
+      "address": "41150 Via Europa, Temecula, CA",
+      "eventsUrl": "https://www.europavillage.com/temecula-events/"
+    },
+    "icon": "🏰"
+  },
+  "hero": {
+    "eyebrow": "Rancho California Road",
+    "headline": "Europa Village",
+    "subtitle": "Immersive · Romantic · All-afternoon destination",
+    "imageUrl": "assets/wineries/europa.jpg",
+    "imageAlt": "Prototype wine-country photography. Replace with owned or licensed Europa Village imagery.",
+    "cardGradient": "linear-gradient(135deg,#593b25,#d0a35a)",
+    "actions": ["save", "addToDay", "directions"]
+  },
+  "vinny": {
+    "take": "This is less ‘quick tasting’ and more ‘we live in Europe now.’",
+    "fit": ["All-day escapes", "Romantic trips", "Food lovers", "Celebrations", "Out-of-town guests"],
+    "watchOuts": ["You want one simple tasting room", "You are short on time", "You dislike destination-scale properties"],
+    "confidence": "high",
+    "freshness": "July 11, 2026",
+    "closingLine": "",
+    "signature": { "eyebrow": "THREE VILLAGES", "headline": "A little Europe, one glass at a time." }
+  },
+  "welcome": {
+    "overall": "Highly Welcoming",
+    "label": "Vinny Verified™",
+    "dimensions": { "hospitality": null, "belonging": null, "accessibility": null, "responsiveness": null, "community": null, "authenticity": null },
+    "confidence": "High",
+    "evidenceCoverage": null,
+    "sourceCount": null,
+    "methodologyVersion": "1.0",
+    "lastReviewedAt": "June 2026",
+    "explanation": "Consistently positive hospitality signals across a complex destination experience.",
+    "evidence": ["Multiple visits", "Hospitality interactions", "Public information review"]
+  },
+  "wine": {
+    "qualityLabel": "",
+    "qualityScore": null,
+    "knownFor": ["European village concepts", "Bolero Restaurante", "Multiple tasting rooms", "Lodging", "Immersive all-day visits"],
+    "signatureWines": [],
+    "styleTags": ["romantic", "food", "views", "tours", "white"]
+  },
+  "quickLook": {
+    "cards": [
+      { "type": "pets", "label": "Dogs", "value": "Policies vary by venue", "state": "partial" },
+      { "type": "food", "label": "Food", "value": "Multiple restaurants", "state": "yes" },
+      { "type": "music", "label": "Music", "value": "Seasonal", "state": "partial" },
+      { "type": "reservations", "label": "Reservations", "value": "Recommended", "state": "partial" },
+      { "type": "family", "label": "Family", "value": "Generally suitable", "state": "yes" },
+      { "type": "patio", "label": "Patio", "value": "Multiple settings", "state": "yes" },
+      { "type": "groups", "label": "Groups", "value": "Excellent for celebrations", "state": "yes" },
+      { "type": "access", "label": "Accessibility", "value": "Verify by village", "state": "unknown" }
+    ],
+    "perfectFor": ["All-day escapes", "Romantic trips", "Food lovers", "Celebrations", "Out-of-town guests"],
+    "maybeSkipIf": ["You want one simple tasting room", "You are short on time", "You dislike destination-scale properties"],
+    "scorecard": { "wine": 4, "hospitality": 4, "food": 5, "photos": 5, "romance": 5, "energy": 4, "value": 3, "groups": 5 }
+  },
+  "planning": {
+    "idealVisitMinutes": "3 hours to a full day",
+    "reservationGuidance": "Recommended for dining and curated experiences",
+    "bestTime": "Arrive early and choose one or two villages",
+    "budget": "",
+    "groupNote": "Strong option for celebrations and mixed-interest groups",
+    "food": "Multiple dining formats from market to full service",
+    "firstVisitEssentials": ["French, Spanish, and Italian-inspired destinations", "Dining, lodging, gardens, and multiple tasting spaces", "Last call for tastings generally 30 minutes before closing"],
+    "amenities": ["Multiple restaurants", "Lodging", "Tours", "Gardens", "Weddings", "Multiple tasting rooms"]
+  },
+  "hours": [
+    { "label": "Bolero Tasting Room", "text": "Mon, Wed, Fri & Sun 11 AM–6 PM · Tue, Thu & Sat 11 AM–8 PM" },
+    { "label": "C’est la Vie", "text": "Fri 10 AM–8 PM · Sat–Sun 10 AM–5 PM · Closed Mon–Thu" },
+    { "label": "Vienza", "text": "Tue, Thu, Fri–Sun 11 AM–6 PM · Mon & Wed 11 AM–8 PM" },
+    { "label": "Bolero Restaurante", "text": "Mon–Fri 11 AM–9 PM · Sat–Sun 9 AM–9 PM" }
+  ],
+  "events": [
+    { "date": "Recurring", "title": "Live Music", "time": "Dates vary", "type": "Live Music" },
+    { "date": "Seasonal", "title": "Sunset Sips and Twilight Tastings", "time": "See calendar", "type": "Tasting" },
+    { "date": "Special", "title": "Concerts, festivals, and pairing events", "time": "See calendar", "type": "Special Event" }
+  ],
+  "reviewSnapshot": {
+    "editorialTake": "A destination rather than a single tasting room. It works especially well for couples and groups who want architecture, dining, gardens, and variety alongside wine.",
+    "strengths": [],
+    "tradeoffs": [],
+    "bestFor": ["All-day escapes", "Romantic trips", "Food lovers", "Celebrations", "Out-of-town guests"],
+    "brief": "French, Spanish, and Italian-inspired wine-country experiences with tastings, dining, tours, events, and lodging.",
+    "visitorPatterns": [
+      "The immersive setting and village concepts attract repeat praise.",
+      "Because the property is extensive, arriving without a plan can feel overwhelming.",
+      "Dining and special experiences are a major part of the appeal."
+    ],
+    "externalLinks": [
+      { "label": "Google reviews", "url": "https://www.google.com/search?q=Europa+Village+reviews" },
+      { "label": "Yelp", "url": "https://www.yelp.com/search?find_desc=Europa+Village&find_loc=Temecula%2C+CA" },
+      { "label": "Tripadvisor", "url": "https://www.tripadvisor.com/Search?q=Europa%20Village" }
+    ]
+  },
+  "personalNotes": {
+    "andrew": { "visible": true, "headline": "Andrew’s Europa pick goes here", "note": "Add Andrew’s favorite village, wine, and whether it earns a full afternoon." },
+    "antonio": { "visible": true, "headline": "Antonio’s Europa pick goes here", "note": "Add Antonio’s most transportive pour and the dish he pairs with it." },
+    "joint": { "visible": false, "note": "" }
+  },
+  "communitySignals": { "summary": "", "positivePatterns": [], "practicalPatterns": [], "emergingPatterns": [] },
+  "trust": {
+    "publicationStatus": "DEMO · REVIEW IN PROGRESS",
+    "overallConfidence": "Not yet assessed",
+    "sourceCount": 1,
+    "lastVerifiedAt": "July 11, 2026",
+    "staleFields": [],
+    "demoRating": "4.5"
+  },
+  "seo": {
+    "title": "Europa Village - Out in the Vines",
+    "description": "French, Spanish, and Italian-inspired wine-country experiences with tastings, dining, tours, events, and lodging.",
+    "canonicalUrl": "",
+    "imageUrl": "assets/wineries/europa.jpg"
+  },
+  "meta": {
+    "updatedAt": "July 11, 2026",
+    "publishedAt": null,
+    "featureFlags": [],
+    "theme": { "name": "european", "accent": "#B48243", "surface": "#FBF5E9", "ink": "#4B3524", "displayFont": "Cormorant Garamond" }
+  }
+}

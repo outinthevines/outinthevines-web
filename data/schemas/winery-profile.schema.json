@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://outinthevines.com/schemas/winery-profile-v1.json",
+  "title": "Canonical Winery Profile v1",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "identity",
+    "hero",
+    "vinny",
+    "welcome",
+    "wine",
+    "quickLook",
+    "planning",
+    "hours",
+    "reviewSnapshot",
+    "trust",
+    "seo",
+    "meta"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "identity": {
+      "type": "object",
+      "required": ["id", "slug", "name", "region", "location", "official"]
+    },
+    "hero": {
+      "type": "object",
+      "required": ["headline", "subtitle", "actions"]
+    },
+    "vinny": {
+      "type": "object",
+      "required": ["take", "fit", "watchOuts", "confidence", "freshness"]
+    },
+    "welcome": {
+      "type": "object",
+      "required": ["overall", "label", "dimensions", "confidence", "methodologyVersion", "explanation"]
+    },
+    "wine": {
+      "type": "object",
+      "required": ["qualityLabel", "knownFor", "signatureWines", "styleTags"]
+    },
+    "quickLook": {
+      "type": "object",
+      "required": ["cards", "perfectFor", "maybeSkipIf"]
+    },
+    "planning": {
+      "type": "object",
+      "required": ["idealVisitMinutes", "reservationGuidance", "bestTime", "budget"]
+    },
+    "hours": { "type": "array" },
+    "events": { "type": "array" },
+    "reviewSnapshot": {
+      "type": "object",
+      "required": ["editorialTake", "strengths", "tradeoffs", "bestFor"]
+    },
+    "personalNotes": { "type": "object" },
+    "communitySignals": { "type": "object" },
+    "trust": {
+      "type": "object",
+      "required": ["publicationStatus", "overallConfidence", "sourceCount", "staleFields"]
+    },
+    "seo": {
+      "type": "object",
+      "required": ["title", "description", "canonicalUrl"]
+    },
+    "meta": {
+      "type": "object",
+      "required": ["updatedAt", "featureFlags"]
+    }
+  },
+  "additionalProperties": false
+}

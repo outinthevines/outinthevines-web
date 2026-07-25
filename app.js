@@ -3,6 +3,13 @@ let favorites=JSON.parse(localStorage.getItem("oitv-favorites")||"[]");
 let myDay=JSON.parse(localStorage.getItem("oitv-day")||"[]");
 let activeFilter="all";
 let matcher={};
+let WINERIES=[];
+
+async function initWineryData(){
+  const profiles=await ProfileService.listWineryProfiles();
+  WINERIES=profiles.map(toLegacyCardModel);
+  renderFeatured();renderExplore();renderPicks();updateCounts();renderDay();renderNearby();renderPassport();
+}
 
 function showView(id){
   $$(".view").forEach(v=>v.classList.remove("active"));
@@ -48,33 +55,51 @@ function renderDay(){
  const list=myDay.map(id=>WINERIES.find(w=>w.id===id)).filter(Boolean);
  $("#dayList").innerHTML=list.length?list.map((w,i)=>`<div class="day-item"><div class="day-num">${i+1}</div><div><strong>${w.name}</strong><small style="display:block;color:#756a71">${w.area} · ${w.vibe}</small></div><button onclick="removeDay('${w.id}')">Remove</button></div>`).join("")+`<div class="notice">🐦 Vinny’s prototype route logic will eventually consider location, hours, reservations, and drive time.</div>`:`<div class="empty"><span>☷</span><h2>Your day is deliciously empty</h2><p>Add up to three wineries. We are planning a wine day, not speed dating.</p><button class="primary" onclick="showView('explore')">Find wineries</button></div>`;
 }
-function openWinery(id){
- const w=WINERIES.find(x=>x.id===id); if(!w)return;
- const hours=(w.hours||[]).map(h=>`<div class="hours-row"><b>${h[0]}</b><span>${h[1]}</span></div>`).join("");
- const events=(w.events||[]).map(e=>`<article class="profile-event"><span>${e.date}</span><div><small>${e.type}</small><h4>${e.title}</h4><p>${e.time}</p></div></article>`).join("");
- const known=(w.knownFor||[]).map(x=>`<span>${x}</span>`).join("");
- const amenities=(w.amenities||[]).map(x=>`<span>✓ ${x}</span>`).join("");
- const visitorNotes=(w.reviews?.visitors||[]).map(x=>`<li>${x}</li>`).join("");
- const reviewLinks=(w.reviews?.links||[]).map(x=>`<a href="${x[1]}" target="_blank" rel="noopener">${x[0]} ↗</a>`).join("");
- const p=w.planning||{};
- const t=w.theme||{name:"default",accent:"#7A2E6B",surface:"#F1E8D9",ink:"#241c24",display:"Playfair Display"};
- const quickFacts=(w.quickFacts||[]).map(q=>quickFact(q)).join("");
- const perfect=(w.perfectFor||[]).map(x=>`<span>${x}</span>`).join("");
- const skip=(w.skipIf||[]).map(x=>`<li>${x}</li>`).join("");
- const score=Object.entries(w.scorecard||{}).map(([k,v])=>scoreRow(k,v)).join("");
- $("#wineryDetail").innerHTML=`<div class="winery-profile theme-${t.name}" style="--profile-accent:${t.accent};--profile-surface:${t.surface};--profile-ink:${t.ink};--profile-display:'${t.display}'">
-  <div class="winery-hero photo-hero themed-hero" style="background-image:linear-gradient(180deg,rgba(20,10,18,.05),rgba(20,10,18,.82)),url('${w.image}')" role="img" aria-label="${w.imageAlt}">
+async function openWinery(id){
+ const p=await ProfileService.getWineryProfile(id); if(!p)return;
+ const w=toLegacyCardModel(p);
+ const hours=(p.hours||[]).map(h=>`<div class="hours-row"><b>${h.label}</b><span>${h.text}</span></div>`).join("");
+ const events=(p.events||[]).map(e=>`<article class="profile-event"><span>${e.date}</span><div><small>${e.type}</small><h4>${e.title}</h4><p>${e.time}</p></div></article>`).join("");
+ const known=(p.wine?.knownFor||[]).map(x=>`<span>${x}</span>`).join("");
+ const amenities=(p.planning?.amenities||[]).map(x=>`<span>✓ ${x}</span>`).join("");
+ const visitorNotes=(p.reviewSnapshot?.visitorPatterns||[]).map(x=>`<li>${x}</li>`).join("");
+ const reviewLinks=(p.reviewSnapshot?.externalLinks||[]).map(x=>`<a href="${x.url}" target="_blank" rel="noopener">${x.label} ↗</a>`).join("");
+ const pl=p.planning||{};
+ const t=p.meta?.theme||{name:"default",accent:"#7A2E6B",surface:"#F1E8D9",ink:"#241c24",displayFont:"Playfair Display"};
+ const quickFacts=(p.quickLook?.cards||[]).map(q=>quickFact([q.type,q.label,q.value,q.state])).join("");
+ const perfect=(p.quickLook?.perfectFor||[]).map(x=>`<span>${x}</span>`).join("");
+ const skip=(p.quickLook?.maybeSkipIf||[]).map(x=>`<li>${x}</li>`).join("");
+ const score=Object.entries(p.quickLook?.scorecard||{}).map(([k,v])=>scoreRow(k,v)).join("");
+ const andrewH=p.personalNotes?.andrew?.headline||"";
+ const andrewN=p.personalNotes?.andrew?.note||"";
+ const antonioH=p.personalNotes?.antonio?.headline||"";
+ const antonioN=p.personalNotes?.antonio?.note||"";
+ const lastVer=p.trust?.lastVerifiedAt||"";
+ const eventsUrl=p.identity?.official?.eventsUrl||"";
+ const sourceUrl=p.identity?.official?.websiteUrl||"";
+ const address=p.identity?.official?.address||"";
+ const img=p.hero?.imageUrl||"";
+ const imgAlt=p.hero?.imageAlt||"";
+ const area=p.identity?.region||"";
+ const name=p.identity?.name||"";
+ const vibe=p.hero?.subtitle||"";
+ const brief=p.reviewSnapshot?.brief||"";
+ const verdict=p.vinny?.take||"";
+ const welcome=p.welcome||{};
+ const facts=p.planning?.firstVisitEssentials||[];
+ $("#wineryDetail").innerHTML=`<div class="winery-profile theme-${t.name}" style="--profile-accent:${t.accent};--profile-surface:${t.surface};--profile-ink:${t.ink};--profile-display:'${t.displayFont}'">
+  <div class="winery-hero photo-hero themed-hero" style="background-image:linear-gradient(180deg,rgba(20,10,18,.05),rgba(20,10,18,.82)),url('${img}')" role="img" aria-label="${imgAlt}">
    <div class="hero-ornament"></div>
-   <div class="winery-hero-content"><button class="back" onclick="showView('explore')">← Back to explore</button><p class="eyebrow gold">${w.area.toUpperCase()}</p><h1>${w.name}</h1><p>${w.vibe}</p>
-   <div class="profile-hero-actions"><button onclick="toggleFavorite('${w.id}')">${favorites.includes(w.id)?"♥ Saved":"♡ Save"}</button><button onclick="addToDay('${w.id}')">+ My Day</button><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(w.address)}" target="_blank" rel="noopener">Directions ↗</a></div></div></div>
-  <div class="profile-welcome-strip"><button class="profile-welcome-badge" onclick="scrollProfile('welcome-profile')"><div class="welcome-icon"><img src="assets/brand/vinny-pride.png" alt=""></div><div class="welcome-copy"><small>${w.welcome?.recognition||"WELCOME INDEX™"}</small><strong>${w.welcome?.designation||"Review in Progress"}</strong><span>${w.welcome?.confidence||"Low"} confidence · Reviewed ${w.welcome?.reviewed||w.lastVerified}</span></div><div class="welcome-arrow">See why →</div></button></div><div class="profile-nav themed-nav"><button onclick="scrollProfile('overview')">Overview</button><button onclick="scrollProfile('quick-look')">Quick Look</button><button onclick="scrollProfile('hours')">Hours</button><button onclick="scrollProfile('events-profile')">Events</button><button onclick="scrollProfile('reviews-profile')">Reviews</button><button onclick="scrollProfile('welcome-profile')">Welcome</button></div>
+   <div class="winery-hero-content"><button class="back" onclick="showView('explore')">← Back to explore</button><p class="eyebrow gold">${area.toUpperCase()}</p><h1>${name}</h1><p>${vibe}</p>
+   <div class="profile-hero-actions"><button onclick="toggleFavorite('${w.id}')">${favorites.includes(w.id)?"♥ Saved":"♡ Save"}</button><button onclick="addToDay('${w.id}')">+ My Day</button><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}" target="_blank" rel="noopener">Directions ↗</a></div></div></div>
+  <div class="profile-welcome-strip"><button class="profile-welcome-badge" onclick="scrollProfile('welcome-profile')"><div class="welcome-icon"><img src="assets/brand/vinny-pride.png" alt=""></div><div class="welcome-copy"><small>${welcome.label||"WELCOME INDEX™"}</small><strong>${welcome.overall||"Review in Progress"}</strong><span>${welcome.confidence||"Low"} confidence · Reviewed ${welcome.lastReviewedAt||lastVer}</span></div><div class="welcome-arrow">See why →</div></button></div><div class="profile-nav themed-nav"><button onclick="scrollProfile('overview')">Overview</button><button onclick="scrollProfile('quick-look')">Quick Look</button><button onclick="scrollProfile('hours')">Hours</button><button onclick="scrollProfile('events-profile')">Events</button><button onclick="scrollProfile('reviews-profile')">Reviews</button><button onclick="scrollProfile('welcome-profile')">Welcome</button></div>
 
-  <div class="profile-signature">${profileSignature(w)}</div>
+  <div class="profile-signature">${profileSignature(p)}</div>
 
   <div class="section rich-profile">
    <main>
-    <section id="overview"><div class="verdict themed-verdict">🐦 “${w.verdict}”</div>
-    <p class="profile-intro">${w.short}</p>
+    <section id="overview"><div class="verdict themed-verdict">🐦 “${verdict}”</div>
+    <p class="profile-intro">${brief}</p>
     <h2>Known for</h2><div class="known-for">${known}</div></section>
 
     <section id="quick-look" class="profile-section">
@@ -89,37 +114,37 @@ function openWinery(id){
 
     <section class="profile-section"><h2>Plan your visit</h2>
     <div class="planning-grid">
-      <article><small>IDEAL VISIT</small><strong>${p.visitLength||"Check profile"}</strong></article>
-      <article><small>RESERVATIONS</small><strong>${p.reservations||"Check official site"}</strong></article>
-      <article><small>FOOD</small><strong>${p.food||"Varies"}</strong></article>
-      <article><small>BEST TIME</small><strong>${p.bestTime||"Varies"}</strong></article>
+      <article><small>IDEAL VISIT</small><strong>${pl.idealVisitMinutes||"Check profile"}</strong></article>
+      <article><small>RESERVATIONS</small><strong>${pl.reservationGuidance||"Check official site"}</strong></article>
+      <article><small>FOOD</small><strong>${pl.food||"Varies"}</strong></article>
+      <article><small>BEST TIME</small><strong>${pl.bestTime||"Varies"}</strong></article>
     </div>
     <h2>What you’ll find</h2><div class="amenity-grid">${amenities}</div></section>
 
-    <section id="hours" class="profile-section"><div class="profile-title"><div><p class="eyebrow plum">PLAN AHEAD</p><h2>Hours</h2></div><span>Verified ${w.lastVerified}</span></div>
+    <section id="hours" class="profile-section"><div class="profile-title"><div><p class="eyebrow plum">PLAN AHEAD</p><h2>Hours</h2></div><span>Verified ${lastVer}</span></div>
     <div class="hours-table">${hours}</div><p class="profile-disclaimer">Hours can change for private events, holidays, weather, and seasonal service. Confirm with the winery before driving.</p></section>
 
-    <section id="events-profile" class="profile-section"><div class="profile-title"><div><p class="eyebrow teal">WHAT’S HAPPENING</p><h2>Upcoming & recurring events</h2></div><a href="${w.eventsUrl}" target="_blank" rel="noopener">Official calendar ↗</a></div>
+    <section id="events-profile" class="profile-section"><div class="profile-title"><div><p class="eyebrow teal">WHAT’S HAPPENING</p><h2>Upcoming & recurring events</h2></div><a href="${eventsUrl}" target="_blank" rel="noopener">Official calendar ↗</a></div>
     <div class="events-list">${events}</div>
-    <div class="dynamic-note"><strong>Prototype event feed:</strong> curated data lives in <code>data.js</code>. Production can use APIs, RSS/ICS, or an approved scheduled sync, always with a refreshed date and official-calendar fallback.</div></section>
+    <div class="dynamic-note"><strong>Prototype event feed:</strong> curated data lives in canonical JSON. Production can use APIs, RSS/ICS, or an approved scheduled sync, always with a refreshed date and official-calendar fallback.</div></section>
 
     <section id="reviews-profile" class="profile-section"><p class="eyebrow gold">THE BIG PICTURE</p><h2>Review snapshot</h2>
-    <div class="editorial-review themed-review"><strong>Out in the Vines editorial take</strong><p>${w.reviews?.editorial||""}</p></div>
+    <div class="editorial-review themed-review"><strong>Out in the Vines editorial take</strong><p>${p.reviewSnapshot?.editorialTake||""}</p></div>
     <h3>Patterns worth knowing</h3><ul class="visitor-notes">${visitorNotes}</ul>
     <div class="external-reviews">${reviewLinks}</div>
     <p class="profile-disclaimer">We link to major third-party platforms rather than copying changing star ratings into the prototype.</p></section>
 
     <section class="profile-section"><h2>Andrew & Antonio recommend</h2><div class="duo-grid">
-      <article class="pick-card andrew"><span class="person">ANDREW</span><h3>${w.andrew}</h3><p>${w.andrewNote}</p></article>
-      <article class="pick-card antonio"><span class="person">ANTONIO</span><h3>${w.antonio}</h3><p>${w.antonioNote}</p></article>
+      <article class="pick-card andrew"><span class="person">ANDREW</span><h3>${andrewH}</h3><p>${andrewN}</p></article>
+      <article class="pick-card antonio"><span class="person">ANTONIO</span><h3>${antonioH}</h3><p>${antonioN}</p></article>
     </div></section>
    </main>
 
    <aside>
-    <div id="welcome-profile" class="rating-box themed-rating detailed-welcome"><p class="eyebrow gold">${w.welcome?.recognition||"WELCOME INDEX™"}</p><h3>${w.welcome?.designation||"Review in Progress"}</h3><p>${w.welcome?.summary||"Assessment in progress."}</p><div class="confidence-line"><b>${w.welcome?.confidence||"Low"} confidence</b><span>Reviewed ${w.welcome?.reviewed||w.lastVerified}</span></div><div class="welcome-evidence">${(w.welcome?.evidence||[]).map(x=>`<span>✓ ${x}</span>`).join("")}</div><small>Prototype assessment content for interface demonstration.</small><button onclick="showView('methodology')">Read the Welcome Index</button></div>
-    <div class="profile-side-card themed-side"><h3>First-visit essentials</h3><div class="fact-list">${w.facts.map(f=>`<div class="fact">✓ ${f}</div>`).join("")}</div></div>
-    <div class="profile-side-card themed-side"><h3>Group note</h3><p>${p.groups||"Contact the winery for larger parties."}</p></div>
-    <div class="profile-side-card themed-side"><h3>Official information</h3><a href="${w.source}" target="_blank" rel="noopener">Visit official winery page ↗</a><p>Last checked: ${w.lastVerified}</p></div>
+    <div id="welcome-profile" class="rating-box themed-rating detailed-welcome"><p class="eyebrow gold">${welcome.label||"WELCOME INDEX™"}</p><h3>${welcome.overall||"Review in Progress"}</h3><p>${welcome.explanation||"Assessment in progress."}</p><div class="confidence-line"><b>${welcome.confidence||"Low"} confidence</b><span>Reviewed ${welcome.lastReviewedAt||lastVer}</span></div><div class="welcome-evidence">${(welcome.evidence||[]).map(x=>`<span>✓ ${x}</span>`).join("")}</div><small>Prototype assessment content for interface demonstration.</small><button onclick="showView('methodology')">Read the Welcome Index</button></div>
+    <div class="profile-side-card themed-side"><h3>First-visit essentials</h3><div class="fact-list">${facts.map(f=>`<div class="fact">✓ ${f}</div>`).join("")}</div></div>
+    <div class="profile-side-card themed-side"><h3>Group note</h3><p>${pl.groupNote||"Contact the winery for larger parties."}</p></div>
+    <div class="profile-side-card themed-side"><h3>Official information</h3><a href="${sourceUrl}" target="_blank" rel="noopener">Visit official winery page ↗</a><p>Last checked: ${lastVer}</p></div>
     <p class="photo-disclosure">Photography shown is prototype imagery and is not represented as a photograph of this property.</p>
    </aside>
   </div>
@@ -136,15 +161,10 @@ function scoreRow(label,value){
  const labels={wine:"Wine",hospitality:"Hospitality",food:"Food",photos:"Photo-worthy",romance:"Romance",energy:"Energy",value:"Value",groups:"Groups"};
  return `<div class="score-row"><span>${labels[label]||label}</span><div>${[1,2,3,4,5].map(i=>`<i class="${i<=value?"on":""}"></i>`).join("")}</div><b>${value}/5</b></div>`;
 }
-function profileSignature(w){
- const signatures={
-  leoness:`<div class="signature-estate"><span>ESTATE EXPERIENCE</span><strong>Vineyard elegance, designed to linger.</strong></div>`,
-  akash:`<div class="signature-modern"><span>OPEN-AIR ENERGY</span><strong>Modern wine country with a social pulse.</strong></div>`,
-  doffo:`<div class="signature-moto"><span>MOTO + MALBEC</span><strong>Family wine culture with horsepower.</strong></div>`,
-  europa:`<div class="signature-european"><span>THREE VILLAGES</span><strong>A little Europe, one glass at a time.</strong></div>`,
-  wilson:`<div class="signature-celebration"><span>POP THE ALMOND</span><strong>Built for celebrations, groups, and good news.</strong></div>`
- };
- return signatures[w.id]||"";
+function profileSignature(p){
+ const sig=p.vinny?.signature; if(!sig)return "";
+ const themeName=p.meta?.theme?.name||"default";
+ return `<div class="signature-${themeName}"><span>${sig.eyebrow}</span><strong>${sig.headline}</strong></div>`;
 }
 function scrollProfile(id){document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"});}
 function runMatcher(){
@@ -158,10 +178,10 @@ function renderPicks(){
 function toast(msg){
  let t=document.createElement("div");t.textContent=msg;t.style.cssText="position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:#241c24;color:white;padding:13px 18px;border-radius:999px;z-index:99;font-weight:700;box-shadow:0 12px 30px #0004";document.body.appendChild(t);setTimeout(()=>t.remove(),2200);
 }
-$$(".filter-row button").forEach(b=>b.addEventListener("click",()=>{activeFilter=b.dataset.filter;$$(".filter-row button").forEach(x=>x.classList.toggle("active",x===b));renderExplore();}));
-$$(".choice-row button").forEach(b=>b.addEventListener("click",()=>{const row=b.parentElement;row.querySelectorAll("button").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");matcher[row.dataset.group]=b.dataset.value;}));
-renderFeatured();renderExplore();renderPicks();updateCounts();renderDay();
+$(".filter-row button").forEach(b=>b.addEventListener("click",()=>{activeFilter=b.dataset.filter;$(".filter-row button").forEach(x=>x.classList.toggle("active",x===b));renderExplore();}));
+$(".choice-row button").forEach(b=>b.addEventListener("click",()=>{const row=b.parentElement;row.querySelectorAll("button").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");matcher[row.dataset.group]=b.dataset.value;}));
 if("serviceWorker"in navigator) navigator.serviceWorker.register("./service-worker.js");
+initWineryData();
 
 const VIBE_LABELS={
   romantic:"Romantic escapes",

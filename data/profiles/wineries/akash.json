@@ -1,0 +1,133 @@
+{
+  "schemaVersion": "1.0",
+  "identity": {
+    "id": "akash",
+    "slug": "akash",
+    "name": "Akash Winery",
+    "region": "Calle Contento",
+    "location": { "city": "Temecula", "state": "CA", "latitude": null, "longitude": null },
+    "official": {
+      "websiteUrl": "https://www.akashwinery.com/info",
+      "bookingUrl": "",
+      "phone": "",
+      "address": "39730 Calle Contento, Temecula, CA",
+      "eventsUrl": "https://www.akashwinery.com/calendar"
+    },
+    "icon": "🎶"
+  },
+  "hero": {
+    "eyebrow": "Calle Contento",
+    "headline": "Akash Winery",
+    "subtitle": "Social · Modern · Patio energy",
+    "imageUrl": "assets/wineries/akash.jpg",
+    "imageAlt": "Prototype wine-country photography. Replace with owned or licensed Akash imagery.",
+    "cardGradient": "linear-gradient(135deg,#143e3a,#2DB4A3)",
+    "actions": ["save", "addToDay", "directions"]
+  },
+  "vinny": {
+    "take": "Come for the patio. Stay because someone ordered another bottle.",
+    "fit": ["Friends’ afternoons", "Live music", "Casual dates", "Sunset drinks", "Groups"],
+    "watchOuts": ["You want silence", "You dislike lively crowds", "You need a guaranteed full restaurant"],
+    "confidence": "medium",
+    "freshness": "July 11, 2026",
+    "closingLine": "",
+    "signature": { "eyebrow": "OPEN-AIR ENERGY", "headline": "Modern wine country with a social pulse." }
+  },
+  "welcome": {
+    "overall": "Welcoming",
+    "label": "Welcome Index™",
+    "dimensions": { "hospitality": null, "belonging": null, "accessibility": null, "responsiveness": null, "community": null, "authenticity": null },
+    "confidence": "Medium",
+    "evidenceCoverage": null,
+    "sourceCount": null,
+    "methodologyVersion": "1.0",
+    "lastReviewedAt": "June 2026",
+    "explanation": "Positive social atmosphere with additional review work still underway.",
+    "evidence": ["Firsthand visit", "Public event and policy review"]
+  },
+  "wine": {
+    "qualityLabel": "",
+    "qualityScore": null,
+    "knownFor": ["Vineyard-view patios", "Live music", "Food pop-ups", "House-made beer", "Social atmosphere"],
+    "signatureWines": [],
+    "styleTags": ["social", "food", "music", "views", "white"]
+  },
+  "quickLook": {
+    "cards": [
+      { "type": "pets", "label": "Dogs", "value": "Patio policy varies", "state": "unknown" },
+      { "type": "food", "label": "Food", "value": "Pop-ups & pizza", "state": "partial" },
+      { "type": "music", "label": "Music", "value": "Frequent", "state": "yes" },
+      { "type": "reservations", "label": "Reservations", "value": "Walk-ins common", "state": "partial" },
+      { "type": "family", "label": "Family", "value": "Check day restrictions", "state": "partial" },
+      { "type": "patio", "label": "Patio", "value": "Major feature", "state": "yes" },
+      { "type": "groups", "label": "Groups", "value": "Very group-friendly", "state": "yes" },
+      { "type": "access", "label": "Accessibility", "value": "Verify details", "state": "unknown" }
+    ],
+    "perfectFor": ["Friends’ afternoons", "Live music", "Casual dates", "Sunset drinks", "Groups"],
+    "maybeSkipIf": ["You want silence", "You dislike lively crowds", "You need a guaranteed full restaurant"],
+    "scorecard": { "wine": 4, "hospitality": 4, "food": 3, "photos": 5, "romance": 3, "energy": 5, "value": 4, "groups": 5 }
+  },
+  "planning": {
+    "idealVisitMinutes": "1.5–3 hours",
+    "reservationGuidance": "Useful for guided tastings and larger groups",
+    "bestTime": "Friday evening or sunset",
+    "budget": "",
+    "groupNote": "A natural fit for social groups",
+    "food": "Pop-ups and selected recurring vendors",
+    "firstVisitEssentials": ["Open-air patios and tasting room", "Regular rotating music lineup", "Food pop-ups and weekend offerings"],
+    "amenities": ["Patio", "Live music", "Beer", "Food pop-ups", "Large-group options", "Cornhole"]
+  },
+  "hours": [
+    { "label": "Tasting Room", "text": "Mon 12–6 PM · Tue 12–8 PM · Wed–Thu 12–6 PM" },
+    { "label": "Weekend", "text": "Fri 11 AM–8 PM · Sat 10 AM–8 PM · Sun 10 AM–7 PM" },
+    { "label": "Recurring note", "text": "Taco Tuesday generally runs 1–8 PM; event schedules vary" }
+  ],
+  "events": [
+    { "date": "Tuesdays", "title": "Rotating Tuesday Music", "time": "Afternoon/evening", "type": "Live Music" },
+    { "date": "Fridays", "title": "Afters@Akash with DJ Rukus", "time": "3:30–7:30 PM", "type": "DJ" },
+    { "date": "Calendar", "title": "Seasonal events and comedy nights", "time": "See official calendar", "type": "Special Event" }
+  ],
+  "reviewSnapshot": {
+    "editorialTake": "A strong choice when the group wants wine country without formality. The energy is social, the patio does the heavy lifting, and staying into the evening often makes sense.",
+    "strengths": [],
+    "tradeoffs": [],
+    "bestFor": ["Friends’ afternoons", "Live music", "Casual dates", "Sunset drinks", "Groups"],
+    "brief": "Vineyard-view patios, wine, house-made beer, music, food pop-ups, and a casual social atmosphere.",
+    "visitorPatterns": [
+      "The relaxed patio atmosphere is a recurring highlight.",
+      "Music and food programming can shape the entire visit.",
+      "Guests looking for quiet should check the calendar before arriving."
+    ],
+    "externalLinks": [
+      { "label": "Google reviews", "url": "https://www.google.com/search?q=Akash+Winery+reviews" },
+      { "label": "Yelp", "url": "https://www.yelp.com/search?find_desc=Akash+Winery&find_loc=Temecula%2C+CA" },
+      { "label": "Tripadvisor", "url": "https://www.tripadvisor.com/Search?q=Akash%20Winery" }
+    ]
+  },
+  "personalNotes": {
+    "andrew": { "visible": true, "headline": "Andrew’s Akash pick goes here", "note": "Add Andrew’s favorite pour and the exact patio mood it matches." },
+    "antonio": { "visible": true, "headline": "Antonio’s Akash pick goes here", "note": "Add Antonio’s preferred wine, rating, and reorder-worthy quote." },
+    "joint": { "visible": false, "note": "" }
+  },
+  "communitySignals": { "summary": "", "positivePatterns": [], "practicalPatterns": [], "emergingPatterns": [] },
+  "trust": {
+    "publicationStatus": "DEMO · REVIEW IN PROGRESS",
+    "overallConfidence": "Not yet assessed",
+    "sourceCount": 1,
+    "lastVerifiedAt": "July 11, 2026",
+    "staleFields": [],
+    "demoRating": "4.4"
+  },
+  "seo": {
+    "title": "Akash Winery - Out in the Vines",
+    "description": "Vineyard-view patios, wine, house-made beer, music, food pop-ups, and a casual social atmosphere.",
+    "canonicalUrl": "",
+    "imageUrl": "assets/wineries/akash.jpg"
+  },
+  "meta": {
+    "updatedAt": "July 11, 2026",
+    "publishedAt": null,
+    "featureFlags": [],
+    "theme": { "name": "modern", "accent": "#20A58E", "surface": "#EAF8F5", "ink": "#173C37", "displayFont": "DM Sans" }
+  }
+}

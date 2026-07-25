@@ -1,0 +1,133 @@
+{
+  "schemaVersion": "1.0",
+  "identity": {
+    "id": "leoness",
+    "slug": "leoness",
+    "name": "Leoness Cellars",
+    "region": "De Portola Wine Trail",
+    "location": { "city": "Temecula", "state": "CA", "latitude": null, "longitude": null },
+    "official": {
+      "websiteUrl": "https://leonesscellars.com/visit/",
+      "bookingUrl": "",
+      "phone": "",
+      "address": "38311 De Portola Rd, Temecula, CA",
+      "eventsUrl": "https://leonesscellars.com/events/calendar/"
+    },
+    "icon": "🍷"
+  },
+  "hero": {
+    "eyebrow": "De Portola Wine Trail",
+    "headline": "Leoness Cellars",
+    "subtitle": "Scenic · Wine-focused · Elevated dining",
+    "imageUrl": "assets/wineries/leoness.jpg",
+    "imageAlt": "Prototype wine-country photography. Replace with owned or licensed Leoness imagery.",
+    "cardGradient": "linear-gradient(135deg,#3b152f,#a95a61)",
+    "actions": ["save", "addToDay", "directions"]
+  },
+  "vinny": {
+    "take": "Give this stop time. The view, food, and wine deserve more than a rushed tasting.",
+    "fit": ["Romantic afternoons", "Wine-focused meals", "Golden hour", "Couples", "Visitors who want to linger"],
+    "watchOuts": ["You only have 45 minutes", "You want a very casual drop-in", "You dislike planning reservations"],
+    "confidence": "high",
+    "freshness": "July 11, 2026",
+    "closingLine": "",
+    "signature": { "eyebrow": "ESTATE EXPERIENCE", "headline": "Vineyard elegance, designed to linger." }
+  },
+  "welcome": {
+    "overall": "Highly Welcoming",
+    "label": "Vinny Verified™",
+    "dimensions": { "hospitality": null, "belonging": null, "accessibility": null, "responsiveness": null, "community": null, "authenticity": null },
+    "confidence": "High",
+    "evidenceCoverage": null,
+    "sourceCount": null,
+    "methodologyVersion": "1.0",
+    "lastReviewedAt": "June 2026",
+    "explanation": "Strong firsthand hospitality signals and a polished guest experience.",
+    "evidence": ["Firsthand visits", "Hospitality interactions", "Public information review"]
+  },
+  "wine": {
+    "qualityLabel": "",
+    "qualityScore": null,
+    "knownFor": ["Estate wines", "Vineyard tours", "Destination dining", "Sunday brunch", "Sweeping vineyard views"],
+    "signatureWines": [],
+    "styleTags": ["romantic", "food", "views", "reds", "tours"]
+  },
+  "quickLook": {
+    "cards": [
+      { "type": "pets", "label": "Dogs", "value": "Patio only", "state": "partial" },
+      { "type": "food", "label": "Food", "value": "Full restaurant", "state": "yes" },
+      { "type": "music", "label": "Music", "value": "Selected dates", "state": "partial" },
+      { "type": "reservations", "label": "Reservations", "value": "Recommended", "state": "partial" },
+      { "type": "family", "label": "Family", "value": "Generally suitable", "state": "yes" },
+      { "type": "patio", "label": "Patio", "value": "Excellent", "state": "yes" },
+      { "type": "groups", "label": "Groups", "value": "Plan ahead", "state": "partial" },
+      { "type": "access", "label": "Accessibility", "value": "Verify details", "state": "unknown" }
+    ],
+    "perfectFor": ["Romantic afternoons", "Wine-focused meals", "Golden hour", "Couples", "Visitors who want to linger"],
+    "maybeSkipIf": ["You only have 45 minutes", "You want a very casual drop-in", "You dislike planning reservations"],
+    "scorecard": { "wine": 5, "hospitality": 4, "food": 5, "photos": 5, "romance": 5, "energy": 3, "value": 4, "groups": 4 }
+  },
+  "planning": {
+    "idealVisitMinutes": "2–3 hours",
+    "reservationGuidance": "Recommended for dining, tours, and groups",
+    "bestTime": "Weekday afternoon or golden hour",
+    "budget": "",
+    "groupNote": "Groups of 6+ should plan ahead",
+    "food": "Full restaurant and terrace menus",
+    "firstVisitEssentials": ["Standard tastings available daily", "Hosted tastings and tours available", "Restaurant reservations strongly recommended"],
+    "amenities": ["Restaurant", "Outdoor seating", "Wine tours", "Brunch", "Private events", "Complimentary parking"]
+  },
+  "hours": [
+    { "label": "Tasting Room", "text": "Mon–Thu 11:30 AM–5 PM · Fri 11:30 AM–6 PM · Sat 11 AM–6 PM · Sun 11 AM–5 PM" },
+    { "label": "Members Terrace", "text": "Mon–Thu 11:30 AM–4:15 PM for public and members · Fri–Sun members only" },
+    { "label": "Restaurant", "text": "Fri 11:30 AM–8 PM · Sat 11:30 AM–9 PM · Sun 11:30 AM–6 PM" }
+  ],
+  "events": [
+    { "date": "Jul 12", "title": "Live Music with Stephanie Salahz", "time": "11 AM–2 PM", "type": "Live Music" },
+    { "date": "Jul 18", "title": "Live Music with Julia Lyons", "time": "2–5 PM", "type": "Live Music" },
+    { "date": "Sundays", "title": "Sunday Brunch", "time": "Reservation times vary", "type": "Dining" }
+  ],
+  "reviewSnapshot": {
+    "editorialTake": "A polished destination for visitors who want serious wine, broad vineyard views, and enough food and activity to make one winery the center of the afternoon.",
+    "strengths": [],
+    "tradeoffs": [],
+    "bestFor": ["Romantic afternoons", "Wine-focused meals", "Golden hour", "Couples", "Visitors who want to linger"],
+    "brief": "Estate wine, vineyard views, tours, and a destination restaurant make Leoness a strong slow-down-and-stay-awhile stop.",
+    "visitorPatterns": [
+      "Guests frequently praise the views and restaurant experience.",
+      "Peak weekends can feel busy, so reservations and extra time help.",
+      "This is a stronger match for an unhurried visit than a quick tasting-room dash."
+    ],
+    "externalLinks": [
+      { "label": "Google reviews", "url": "https://www.google.com/search?q=Leoness+Cellars+reviews" },
+      { "label": "Yelp", "url": "https://www.yelp.com/biz/leoness-cellars-temecula" },
+      { "label": "Tripadvisor", "url": "https://www.tripadvisor.com/Search?q=Leoness%20Cellars" }
+    ]
+  },
+  "personalNotes": {
+    "andrew": { "visible": true, "headline": "Andrew’s Leoness pick goes here", "note": "Add Andrew’s actual bottle, tasting note, and why he returns to it." },
+    "antonio": { "visible": true, "headline": "Antonio’s Leoness pick goes here", "note": "Add Antonio’s honest take, ideal occasion, and who will enjoy it." },
+    "joint": { "visible": false, "note": "" }
+  },
+  "communitySignals": { "summary": "", "positivePatterns": [], "practicalPatterns": [], "emergingPatterns": [] },
+  "trust": {
+    "publicationStatus": "DEMO · REVIEW IN PROGRESS",
+    "overallConfidence": "Not yet assessed",
+    "sourceCount": 1,
+    "lastVerifiedAt": "July 11, 2026",
+    "staleFields": [],
+    "demoRating": "4.6"
+  },
+  "seo": {
+    "title": "Leoness Cellars - Out in the Vines",
+    "description": "Estate wine, vineyard views, tours, and a destination restaurant make Leoness a strong slow-down-and-stay-awhile stop.",
+    "canonicalUrl": "",
+    "imageUrl": "assets/wineries/leoness.jpg"
+  },
+  "meta": {
+    "updatedAt": "July 11, 2026",
+    "publishedAt": null,
+    "featureFlags": [],
+    "theme": { "name": "estate", "accent": "#8D5A57", "surface": "#F6EFEA", "ink": "#3B2328", "displayFont": "Playfair Display" }
+  }
+}
