@@ -1,0 +1,19 @@
+{
+  "name": "oitv-consumer-preview-root",
+  "private": true,
+  "scripts": {
+    "build": "next build consumer-poc",
+    "vercel-build": "next build consumer-poc"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "typescript": "latest"
+  }
+}
