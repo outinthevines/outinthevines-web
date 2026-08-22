@@ -8,13 +8,14 @@
   <title>Out in the Vines</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="header-logo.css">
 </head>
 <body>
   <div class="demo-banner">OUT IN THE VINES · FOUNDER’S EDITION · TEMECULA</div>
 
   <header class="topbar">
     <button class="brand" onclick="showView('home')" aria-label="Out in the Vines home">
-      <img class="brand-logo-img" src="assets/brand/primary-logo.png" alt="Out in the Vines logo with Vinny the hummingbird">
+      <img class="brand-logo-img" src="assets/brand/OITV - Horizontal.png" alt="Out in the Vines horizontal logo with Vinny the hummingbird">
     </button>
     <nav class="desktop-nav">
       <button onclick="showView('explore')">Explore</button>
@@ -184,233 +185,21 @@
       <div id="matchResults" class="section hidden"><div class="section-head"><div><p class="eyebrow teal">BEST MATCHES</p><h2>Vinny’s picks for today</h2></div></div><div id="matchGrid" class="winery-grid"></div></div>
     </section>
 
-    <section id="explore" class="view">
-      <div class="page-header">
-        <p class="eyebrow gold">TEMECULA WINE COUNTRY</p>
-        <h1>Explore wineries</h1>
-        <p>Five prototype profiles. Real winery characteristics, demo editorial ratings.</p>
-      </div>
-      <div class="explore-tools">
-        <input id="searchInput" type="search" placeholder="Search wineries, wine, or vibe…" oninput="renderExplore()">
-        <div class="filter-row" id="filters">
-          <button class="active" data-filter="all">All</button><button data-filter="food">Food</button><button data-filter="romantic">Date night</button><button data-filter="social">Lively</button><button data-filter="unique">Unique</button><button data-filter="reds">Great reds</button>
-        </div>
-      </div>
-      <div id="exploreGrid" class="winery-grid section"></div>
-    </section>
-
-    <section id="map" class="view">
-      <div class="page-header compact"><p class="eyebrow gold">MOCK MAP VIEW</p><h1>Wine country at a glance</h1><p>This visual map demonstrates the future interaction. Pins are approximate, not navigational.</p></div>
-      <div class="map-shell">
-        <div class="fake-map">
-          <div class="road r1">RANCHO CALIFORNIA RD</div><div class="road r2">DE PORTOLA RD</div>
-          <button class="map-pin p1" onclick="openWinery('wilson')">🍇<span>Wilson Creek</span></button>
-          <button class="map-pin p2" onclick="openWinery('akash')">🍇<span>Akash</span></button>
-          <button class="map-pin p3" onclick="openWinery('europa')">🍇<span>Europa</span></button>
-          <button class="map-pin p4" onclick="openWinery('leoness')">🍇<span>Leoness</span></button>
-          <button class="map-pin p5" onclick="openWinery('doffo')">🍇<span>Doffo</span></button>
-          <div class="map-vinny">🐦 <strong>Vinny says:</strong> Keep your day to three stops. Wine country is not a scavenger hunt.</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="picks" class="view">
-      <div class="page-header special">
-        <p class="eyebrow gold">ANDREW & ANTONIO</p>
-        <h1>We drank through Temecula<br>so you don’t have to.</h1>
-        <p>Actually, we’ll probably keep doing it anyway.</p>
-      </div>
-      <div class="section">
-        <div class="notice">These personal wine selections are placeholders awaiting Andrew and Antonio’s real picks. The prototype demonstrates how each recommendation will look.</div>
-        <div id="picksGrid" class="duo-grid"></div>
-      </div>
-    </section>
-
-    <section id="favorites" class="view">
-      <div class="page-header compact"><p class="eyebrow gold">SAVED FOR LATER</p><h1>Your favorites</h1><p>The browser remembers these on this device.</p></div>
-      <div id="favoritesGrid" class="winery-grid section"></div>
-    </section>
-
-    <section id="myday" class="view">
-      <div class="page-header compact"><p class="eyebrow gold">YOUR WINE DAY</p><h1>Keep it cute. Keep it to three.</h1><p>Add wineries from any profile. Vinny will protect you from overplanning.</p></div>
-      <div id="dayList" class="day-list section"></div>
-    </section>
-
-    <section id="methodology" class="view">
-      <div class="page-header methodology-head">
-        <p class="eyebrow gold">OUR MOST IMPORTANT FEATURE</p>
-        <h1>The Vinny Welcome Rating</h1>
-        <p>A transparent, evolving editorial assessment designed to help LGBTQ+ travelers make more confident choices.</p>
-      </div>
-      <div class="methodology section">
-        <div class="method-card"><span>01</span><h3>Firsthand experience</h3><p>Visits and direct hospitality experiences from Andrew and Antonio carry significant weight.</p></div>
-        <div class="method-card"><span>02</span><h3>Hospitality preparedness</h3><p>Conflict resolution, harassment prevention, and inclusion training may support the assessment when verified.</p></div>
-        <div class="method-card"><span>03</span><h3>Public actions</h3><p>Documented community engagement, leadership actions, endorsements, or political giving may be considered with context and reliable sourcing.</p></div>
-        <div class="method-card"><span>04</span><h3>Guest experience</h3><p>Credible, specific reports can reveal whether welcoming practices are consistent across visits.</p></div>
-        <div class="method-card"><span>05</span><h3>Right to respond</h3><p>Wineries should have a clear process to correct outdated facts, supply context, and describe improvements.</p></div>
-        <div class="method-card"><span>06</span><h3>Confidence matters</h3><p>A score will be paired with low, medium, or high confidence so limited evidence is never mistaken for a definitive conclusion.</p></div>
-      </div>
-
-
-      <div class="section badge-showcase"><div><p class="eyebrow plum">THE RECOGNITION</p><h2>Vinny Verified™</h2><p>A visible recognition for wineries that meet the Welcome Index™ threshold with sufficient evidence and confidence.</p><div class="badge-uses"><span>Website badge</span><span>Tasting-room decal</span><span>Printed certificate</span><span>Social graphic</span></div></div><div class="badge-mockups"><div class="verified-medal large"><img src="assets/brand/vinny-pride.png" alt="Vinny hummingbird"><span>VINNY VERIFIED™</span><strong>Highly Welcoming</strong><small>WELCOME INDEX™ · OUT IN THE VINES</small></div><div class="badge-mini"><img src="assets/brand/vinny-pride.png" alt=""><div><b>VINNY VERIFIED™</b><span>Highly Welcoming</span></div></div></div></div>
-
-      <div class="section standard-framework">
-        <div class="section-head"><div><p class="eyebrow plum">FORMAL REVIEW FRAMEWORK</p><h2>How a review becomes publishable</h2></div></div>
-        <div class="framework-steps">
-          <article><span>1</span><h3>Open a review file</h3><p>Create a unique winery record, assign a reviewer, establish the review period, and log every source.</p></article>
-          <article><span>2</span><h3>Collect evidence</h3><p>Document firsthand visits, hospitality interactions, training confirmation, public actions, guest reports, and winery responses.</p></article>
-          <article><span>3</span><h3>Score dimensions</h3><p>Score each defined category using anchored criteria rather than instinct alone.</p></article>
-          <article><span>4</span><h3>Apply confidence</h3><p>Low, medium, or high confidence reflects the quantity, recency, independence, and consistency of evidence.</p></article>
-          <article><span>5</span><h3>Editorial review</h3><p>A second reviewer checks evidence quality, tone, calculation, unsupported claims, and conflicts of interest.</p></article>
-          <article><span>6</span><h3>Notify and publish</h3><p>Give the winery a factual-correction window, publish the report, and set the next review date.</p></article>
-        </div>
-
-        <div class="score-table">
-          <h2>Proposed weighted dimensions</h2>
-          <div><b>Firsthand LGBTQ+ guest experience</b><span>30%</span><p>Comfort, respect, consistency, and how identity-related moments are handled.</p></div>
-          <div><b>Hospitality and staff conduct</b><span>20%</span><p>Warmth, professionalism, service recovery, and consistent treatment across guests.</p></div>
-          <div><b>Conflict-resolution readiness</b><span>15%</span><p>Documented escalation pathways, management response, and applicable training.</p></div>
-          <div><b>Inclusive practices and representation</b><span>15%</span><p>Policies, language, marketing, facilities, partnerships, and visible signals.</p></div>
-          <div><b>Community engagement</b><span>10%</span><p>Meaningful, sustained participation rather than one-off performative gestures.</p></div>
-          <div><b>Public leadership actions</b><span>10%</span><p>Relevant verified endorsements, donations, statements, or actions reviewed with context.</p></div>
-        </div>
-
-        <div class="evidence-rules">
-          <h2>Documentation rules</h2>
-          <ul>
-            <li>Every material claim receives a source, date, evidence type, and reviewer note.</li>
-            <li>Political activity can inform no more than 10% of the total assessment and can never determine the rating alone.</li>
-            <li>Anonymous guest reports require corroboration before affecting a public designation.</li>
-            <li>Personal experience is labeled as such and separated from verified public facts.</li>
-            <li>Old evidence decays in weight unless it reflects unresolved conduct or an ongoing policy.</li>
-            <li>Wineries can submit corrections, context, training records, ownership changes, and requests for re-review.</li>
-          </ul>
-          <a class="download-link" href="VINNY_WELCOME_STANDARD.md" download>Download the methodology draft →</a>
-        </div>
-      </div>
-
-      <div class="section rating-key">
-        <h2>Prototype rating states</h2>
-        <div><b>Vinny Verified</b><span>Strong, current evidence of a welcoming experience</span></div>
-        <div><b>Welcoming</b><span>Positive assessment with sufficient evidence</span></div>
-        <div><b>Promising</b><span>Positive signals, more evidence needed</span></div>
-        <div><b>Mixed Experience</b><span>Meaningful inconsistencies documented</span></div>
-        <div><b>Use Your Discretion</b><span>Substantial verified concerns</span></div>
-        <div><b>Review in Progress</b><span>No conclusion yet</span></div>
-      </div>
-    </section>
-
-
-
-    <section id="nearby" class="view">
-      <div class="page-header nearby-head">
-        <p class="eyebrow gold">VINNY NEARBY · PROTOTYPE MODE</p>
-        <h1>You’re in wine country.<br>What sounds good now?</h1>
-        <p>This mock mode demonstrates the future GPS experience using sample distances and current prototype data.</p>
-      </div>
-      <div class="section nearby-controls">
-        <button onclick="renderNearby('open')">Open now</button>
-        <button onclick="renderNearby('food')">Food nearby</button>
-        <button onclick="renderNearby('quick')">Closest first</button>
-        <button onclick="renderNearby('welcome')">Strong welcome signals</button>
-      </div>
-      <div class="section nearby-shell">
-        <div class="nearby-vinny">
-          <img src="assets/brand/vinny-map.png" alt="Vinny holding a map">
-          <div><strong>Vinny says:</strong><p id="nearbyTip">Three stops is a lovely wine day. Seven is a cry for help.</p></div>
-        </div>
-        <div id="nearbyGrid" class="winery-grid"></div>
-      </div>
-    </section>
-
-    <section id="vinny" class="view">
-      <div class="page-header vinny-head">
-        <p class="eyebrow gold">MEET YOUR WINE-COUNTRY GUIDE</p>
-        <h1>Vinny has excellent taste.</h1>
-        <p>And yes, the throat feathers are naturally this fabulous.</p>
-      </div>
-      <div class="section vinny-story">
-        <div class="vinny-large"><img src="assets/brand/vinny-pride.png" alt="Vinny the realistic iridescent hummingbird mascot"></div>
-        <div>
-          <p class="eyebrow plum">WHY A HUMMINGBIRD?</p>
-          <h2>Small bird. Big personality.</h2>
-          <p>Hummingbirds are curious, energetic, adaptable, and drawn to beautiful places. Vinny brings those same qualities to wine travel.</p>
-          <p>His subtle iridescent rainbow is a nod to the LGBTQ+ community without turning the brand into a wall of rainbow graphics. He is the welcoming guide who helps everyone find the right place for the day they want to have.</p>
-          <div class="vinny-quotes">
-            <blockquote>“Trust me on the Cab Franc.”</blockquote>
-            <blockquote>“Hydrate. Seriously.”</blockquote>
-            <blockquote>“Wine tastes better when you feel like you belong.”</blockquote>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="passport" class="view">
-      <div class="page-header special">
-        <p class="eyebrow gold">FUTURE FEATURE PREVIEW</p>
-        <h1>Your Temecula Wine Passport</h1>
-        <p>A playful record of where you have been, what you tasted, and what Vinny thinks you should try next.</p>
-      </div>
-      <div class="section">
-        <div class="passport-card">
-          <div class="passport-top"><div><p class="eyebrow plum">TEMECULA PROGRESS</p><h2>2 of 5 prototype wineries</h2></div><img src="assets/brand/vinny-save.png" alt="Vinny saving a favorite"></div>
-          <div class="progress"><span style="width:40%"></span></div>
-          <div class="stamp-grid" id="passportGrid"></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="events" class="view">
-      <div class="page-header special">
-        <p class="eyebrow gold">EVENT DISCOVERY PREVIEW</p>
-        <h1>What’s happening in wine country?</h1>
-        <p>Sample cards demonstrate how the future site will organize live music, dinners, celebrations, and LGBTQ+ events.</p>
-      </div>
-      <div class="section event-grid">
-        <article><span class="event-type">LIVE MUSIC</span><h3>Sunset Sessions</h3><p>Akash Winery · Saturday · 5:00 PM</p><small>Prototype event only</small></article>
-        <article><span class="event-type">WINE DINNER</span><h3>Estate Pairing Evening</h3><p>Leoness Cellars · Friday · 6:30 PM</p><small>Prototype event only</small></article>
-        <article><span class="event-type">COMMUNITY</span><h3>Out in the Vines Social</h3><p>Temecula Wine Country · Date TBA</p><small>Concept event</small></article>
-      </div>
-    </section>
-
-    <section id="brandkit" class="view">
-      <div class="page-header special">
-        <p class="eyebrow gold">OFFICIAL IDENTITY SYSTEM</p>
-        <h1>The Out in the Vines Brand Kit</h1>
-        <p>Vinny, Andrew, Antonio, the complete color system, and the visual language designed to make inclusive wine travel feel unforgettable.</p>
-      </div>
-      <div class="section brand-kit-page">
-        <img class="full-brand-board" src="assets/brand/official-brand-kit.png" alt="Official Out in the Vines brand kit showing logos, realistic Vinny mascot poses, colors, typography, badges, and applications">
-        <div class="brand-founders-card">
-          <img src="assets/people/andrew-antonio-card.jpg" alt="AI portrait of Andrew and Antonio in wine country">
-          <div>
-            <p class="eyebrow plum">THE PEOPLE BEHIND THE BIRD</p>
-            <h2>Andrew & Antonio</h2>
-            <p>Out in the Vines is built from firsthand experience, shared adventures, and two different palates. Vinny may be the guide, but Andrew and Antonio are the human heart of the brand.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="winery" class="view">
-      <div id="wineryDetail"></div>
-    </section>
+    <section id="explore" class="view"><div class="page-header"><button class="back" onclick="showView('home')">← Back</button><p class="eyebrow gold">EXPLORE</p><h1>Find your next favorite winery.</h1></div><div class="explore-tools"><input id="searchInput" placeholder="Search wineries, wine styles, vibes…" oninput="renderExplore()"><div class="filter-row"><button class="active" data-filter="all" onclick="setExploreFilter('all',this)">All</button><button data-filter="romantic" onclick="setExploreFilter('romantic',this)">Romantic</button><button data-filter="food" onclick="setExploreFilter('food',this)">Food</button><button data-filter="reds" onclick="setExploreFilter('reds',this)">Big reds</button><button data-filter="sparkling" onclick="setExploreFilter('sparkling',this)">Sparkling</button><button data-filter="social" onclick="setExploreFilter('social',this)">Lively</button><button data-filter="relaxed" onclick="setExploreFilter('relaxed',this)">Hidden gems</button></div></div><section class="section"><div id="exploreGrid" class="winery-grid"></div></section></section>
+    <section id="map" class="view"><div class="page-header compact"><button class="back" onclick="showView('home')">← Back</button><p class="eyebrow gold">MAP</p><h1>Wine country at a glance.</h1></div><div class="map-shell"><div class="fake-map"><div class="road">RANCHO CALIFORNIA ROAD</div><div class="road r2">DE PORTOLA ROAD</div><button class="map-pin p1" onclick="openWinery('leoness')">●<span>Leoness</span></button><button class="map-pin p2" onclick="openWinery('doffo')">●<span>Doffo</span></button><button class="map-pin p3" onclick="openWinery('akash')">●<span>Akash</span></button><button class="map-pin p4" onclick="openWinery('wilson')">●<span>Wilson Creek</span></button><button class="map-pin p5" onclick="openWinery('europa')">●<span>Europa Village</span></button><div class="map-vinny">Vinny says: start with the vibe, not the mileage.</div></div></div></section>
+    <section id="picks" class="view"><div class="page-header special"><button class="back" onclick="showView('home')">← Back</button><p class="eyebrow gold">OUR PICKS</p><h1>Two husbands. Two palates.<br>Zero fake consensus.</h1><p>Our actual preferences, tasting notes, and current favorites.</p></div><section class="section"><div class="duo-grid"><article class="pick-card andrew"><span class="person">ANDREW</span><h3>Big reds, polished hospitality, and a reason to linger.</h3><p>Expect strong opinions on Cabernet Franc, Syrah, food programs, service, and whether the overall experience earns the drive.</p></article><article class="pick-card antonio"><span class="person">ANTONIO</span><h3>Bright wines, beautiful spaces, and the bottle worth ordering again.</h3><p>Antonio’s picks bring a different palate, energy, and perspective to the same wine country.</p></article></div></section></section>
+    <section id="nearby" class="view"><div class="page-header compact"><button class="back" onclick="showView('home')">← Back</button><p class="eyebrow gold">NEARBY</p><h1>Already here?<br>Vinny can work with that.</h1><p>Prototype mode: nearby recommendations use sample distances until live location is connected.</p></div><section class="section"><div class="notice">Prototype distances shown for experience design only.</div><div id="nearbyGrid" class="winery-grid"></div></section></section>
+    <section id="vinny" class="view"><div class="page-header special"><button class="back" onclick="showView('home')">← Back</button><p class="eyebrow gold">MEET VINNY</p><h1>Your wine-country guide,<br>with a little more personality.</h1></div><section class="section"><div class="detail-grid"><div class="detail-main"><h2>What Vinny does</h2><p>Vinny helps turn a giant list of wineries into a day that actually fits you. He weighs vibe, wine style, hospitality, food, events, proximity, and the Vinny Welcome Standard.</p><div class="fact-list"><div class="fact"><strong>Ask by vibe</strong><br><small>“Somewhere romantic with good reds.”</small></div><div class="fact"><strong>Ask by moment</strong><br><small>“We have two hours and want somewhere nearby.”</small></div><div class="fact"><strong>Ask by comfort</strong><br><small>“Where are we most likely to feel welcome?”</small></div></div></div><aside class="detail-side"><div class="rating-box"><span class="rating-num">🐦</span><strong>Vinny is editorial, not pay-to-play.</strong><small>Recommendations should be earned by the actual experience.</small></div></aside></div></section></section>
+    <section id="methodology" class="view"><div class="page-header methodology-head"><button class="back" onclick="showView('home')">← Back</button><p class="eyebrow gold">THE VINNY WELCOME STANDARD</p><h1>Hospitality should be visible.</h1><p>Our inclusion methodology looks at the things guests can actually observe and experience.</p></div><section class="section"><div class="methodology"><article class="method-card"><span>01</span><h3>Public signals</h3><p>Policies, staff language, event programming, community participation, and visible indicators of welcome.</p></article><article class="method-card"><span>02</span><h3>Guest experience</h3><p>How people are treated, how concerns are resolved, and whether inclusion shows up consistently in hospitality.</p></article><article class="method-card"><span>03</span><h3>Evidence over vibes</h3><p>Scores should be explainable, sourced, and revisited when the evidence changes.</p></article></div></section></section>
+    <section id="brandkit" class="view"><div class="page-header"><button class="back" onclick="showView('home')">← Back</button><p class="eyebrow gold">BRAND</p><h1>Out in the Vines brand system.</h1></div><section class="section"><p>Brand-kit prototype content.</p></section></section>
+    <section id="favorites" class="view"><div class="page-header compact"><button class="back" onclick="showView('home')">← Back</button><p class="eyebrow gold">FAVORITES</p><h1>Your saved wineries.</h1></div><section class="section"><div id="favoritesGrid" class="winery-grid"></div></section></section>
+    <section id="passport" class="view"><div class="page-header compact"><button class="back" onclick="showView('home')">← Back</button><p class="eyebrow gold">PASSPORT</p><h1>Track the wineries you’ve made yours.</h1></div><section class="section"><div class="empty"><span>🍇</span><h2>Passport preview</h2><p>Visit tracking and regional milestones will live here.</p></div></section></section>
+    <section id="events" class="view"><div class="page-header compact"><button class="back" onclick="showView('home')">← Back</button><p class="eyebrow gold">EVENTS</p><h1>More than just tastings.</h1></div><section class="section"><div class="empty"><span>🗓️</span><h2>Events preview</h2><p>Music, dinners, special tastings, drag brunches, and more.</p></div></section></section>
+    <section id="myday" class="view"><div class="page-header compact"><button class="back" onclick="showView('home')">← Back</button><p class="eyebrow gold">BUILD MY DAY</p><h1>A better wine day,<br>without the spreadsheet.</h1></div><section class="section"><div id="dayList" class="day-list"></div></section></section>
+    <section id="winery" class="view"><div id="wineryDetail"></div></section>
   </main>
 
-  <nav class="bottom-nav">
-    <button data-nav="home" class="active" onclick="showView('home')"><span>⌂</span>Home</button>
-    <button data-nav="explore" onclick="showView('explore')"><span>⌕</span>Explore</button>
-    <button data-nav="map" onclick="showView('map')"><span>⌖</span>Map</button>
-    <button data-nav="favorites" onclick="showView('favorites')"><span>♡</span>Favorites</button>
-    <button data-nav="myday" onclick="showView('myday')"><span>☷</span>My Day</button>
-  </nav>
-
-
-  <footer class="site-footer">
-    <img src="assets/brand/vinny-cheers.png" alt="Vinny raising a glass">
-    <div><p class="eyebrow gold">VINNY’S LAST SIP</p><blockquote id="lastSip">“The best tasting room is the one where you feel like you belong.”</blockquote></div>
-  </footer>
-
+  <nav class="bottom-nav"><button onclick="showView('home')">Home</button><button onclick="showView('explore')">Explore</button><button onclick="showView('map')">Map</button><button onclick="showView('favorites')">Saved</button></nav>
   <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
