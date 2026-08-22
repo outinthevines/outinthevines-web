@@ -24,7 +24,7 @@ export default function HomePage(){
     <main>
       <section id="home" className="view active">
         <div className="hero"><div className="hero-shade"/><div className="hero-content">
-          <div className="vinny-card"><div className="vinny-illustration realistic"><img src={`${ASSET}/brand/vinny-hero.png`} alt="Vinny" /></div><div><span className="script">Hey there,</span><h2>I’m Vinny!</h2><p>Your guide to wine country where you belong.</p></div></div>
+          <div className="vinny-card"><div className="vinny-illustration realistic"><img src={`${ASSET}/brand/vinny-avatar.png`} alt="Vinny" /></div><div><span className="script">Hey there,</span><h2>I’m Vinny!</h2><p>Your guide to wine country where you belong.</p></div></div>
           <p className="eyebrow">TEMECULA, CALIFORNIA</p><h1>Find your kind of<br/><em>wine country.</em></h1><p className="hero-copy">Inclusive insights, honest local recommendations, and really good wine.</p>
           <div className="hero-actions hero-actions-v2"><button className="primary">Plan by vibe</button><button className="secondary light">I’m already in Temecula</button></div>
         </div></div>
